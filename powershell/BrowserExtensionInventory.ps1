@@ -1,0 +1,1 @@
+# BrowserExtensionInventory.ps1
