@@ -79,6 +79,18 @@ python falcon_extension_inventory.py `
 - Windows endpoints
 
 ---
+## Required API Scopes
+
+The Falcon API Client requires the following permissions:
+
+| Scope | Permission |
+|--------|------------|
+| Hosts | Read |
+| Real Time Response | Read |
+| Real Time Response | Write |
+| Scripts | Read |
+
+> **Note:** Administrator-level RTR permissions may be required depending on your Falcon policy configuration.
 
 ## Sample Output
 
