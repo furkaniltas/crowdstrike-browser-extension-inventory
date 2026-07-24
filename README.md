@@ -54,6 +54,23 @@ python/
 
 ---
 
+## Quick Start
+
+1. Upload `BrowserExtensionInventory.ps1` to **CrowdStrike Falcon → Response Scripts and Files**.
+2. Create a Falcon API Client with the required RTR Admin permissions.
+3. Set your Falcon API credentials as environment variables.
+4. Execute the Python controller.
+
+```powershell
+$env:FALCON_CLIENT_ID="YOUR_CLIENT_ID"
+$env:FALCON_CLIENT_SECRET="YOUR_CLIENT_SECRET"
+$env:FALCON_BASE_URL="https://api.eu-1.crowdstrike.com"
+
+python falcon_extension_inventory.py `
+    --host-group-id "HOST_GROUP_ID" `
+    --script-name "BrowserExtensionInventory"
+```
+
 ## Requirements
 
 - CrowdStrike Falcon
