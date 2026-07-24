@@ -1,6 +1,8 @@
 # CrowdStrike Browser Extension Inventory
 
-Inventory Chrome, Microsoft Edge and Firefox extensions across Windows endpoints using **CrowdStrike Falcon RTR**, **Falcon API**, **PowerShell** and **Python**.
+Inventory Google Chrome, Microsoft Edge and Mozilla Firefox extensions across Windows endpoints using **CrowdStrike Falcon RTR**, **Falcon API**, **PowerShell**, and **Python**.
+
+This project executes a PowerShell script across an entire CrowdStrike Host Group using Real Time Response (RTR), collects JSON results from each endpoint, and generates consolidated CSV reports for browser extension inventory.
 
 ## Features
 
