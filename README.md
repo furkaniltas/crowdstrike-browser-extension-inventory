@@ -80,6 +80,17 @@ python falcon_extension_inventory.py `
 
 ---
 
+## Sample Output
+
+### extension_inventory.csv
+
+| ComputerName | Browser | Extension | Version | Enabled |
+|----------|---------|-----------|---------|---------|
+| PC-001 | Chrome | Bitwarden | 2025.7.0 | Yes |
+| PC-001 | Edge | Microsoft Editor | 1.2.3 | Yes |
+| PC-002 | Firefox | uBlock Origin | 1.65.0 | Yes |
+| PC-003 | Chrome | Google Docs Offline | 1.89 | No |
+
 ## Output
 
 The project generates:
