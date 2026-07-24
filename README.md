@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 # CrowdStrike Browser Extension Inventory
 
 Inventory Google Chrome, Microsoft Edge and Mozilla Firefox extensions across Windows endpoints using **CrowdStrike Falcon RTR**, **Falcon API**, **PowerShell**, and **Python**.
@@ -19,9 +23,6 @@ This project executes a PowerShell script across an entire CrowdStrike Host Grou
 
 ## Architecture
 
-```
-## Workflow
-
 ```text
 Python Controller
         │
@@ -39,7 +40,6 @@ Collect JSON Results
         │
         ▼
 Generate CSV Reports
-```
 
 ```
 
@@ -48,11 +48,14 @@ Generate CSV Reports
 ## Repository Structure
 
 ```
-powershell/
-    BrowserExtensionInventory.ps1
 
-python/
-    falcon_extension_inventory.py
+├── powershell/
+│   └── BrowserExtensionInventory.ps1
+├── python/
+│   └── falcon_extension_inventory.py
+├── LICENSE
+└── README.md
+
 ```
 
 ---
@@ -86,12 +89,12 @@ python falcon_extension_inventory.py `
 
 The Falcon API Client requires the following permissions:
 
-| Scope | Permission |
-|--------|------------|
-| Hosts | Read |
-| Real Time Response | Read |
-| Real Time Response | Write |
-| Scripts | Read |
+| Scope              | Permission |
+|--------------------|------------|
+| Hosts              | Read       |
+| Real Time Response | Read       |
+| Real Time Response | Write      |
+| Scripts            | Read       |
 
 > **Note:** Administrator-level RTR permissions may be required depending on your Falcon policy configuration.
 
@@ -99,22 +102,22 @@ The Falcon API Client requires the following permissions:
 
 ### extension_inventory.csv
 
-| ComputerName | Browser | Extension | Version | Enabled |
-|----------|---------|-----------|---------|---------|
-| PC-001 | Chrome | Bitwarden | 2025.7.0 | Yes |
-| PC-001 | Edge | Microsoft Editor | 1.2.3 | Yes |
-| PC-002 | Firefox | uBlock Origin | 1.65.0 | Yes |
-| PC-003 | Chrome | Google Docs Offline | 1.89 | No |
+| ComputerName | Browser | Extension           | Version  | Enabled |
+|--------------|---------|---------------------|----------|---------|
+| PC-001       | Chrome  | Bitwarden           | 2025.7.0 | Yes     |
+| PC-001       | Edge    | Microsoft Editor    | 1.2.3    | Yes     |
+| PC-002       | Firefox | uBlock Origin       | 1.65.0   | Yes     |
+| PC-003       | Chrome  | Google Docs Offline | 1.89     | No      |
 
 ## Output
 
-The project generates:
+The project generates the following reports:
 
-- `extension_inventory.csv`
-- `extension_inventory_failures.csv`
+- `extension_inventory.csv` — Successfully collected browser extension inventory.
+- `extension_inventory_failures.csv` — Hosts that were offline or returned errors during execution.
 
 ---
 
 ## License
 
-MIT License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
