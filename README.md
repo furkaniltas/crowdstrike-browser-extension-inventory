@@ -20,24 +20,27 @@ This project executes a PowerShell script across an entire CrowdStrike Host Grou
 ## Architecture
 
 ```
-Python Script
-      │
-      │ Falcon API
-      ▼
-CrowdStrike Cloud
-      │
-      │ RTR
-      ▼
-Windows Endpoints
-      │
-      ▼
-PowerShell Script
-      │
-      ▼
-JSON Output
-      │
-      ▼
-CSV Report
+## Workflow
+
+```text
+Python Controller
+        │
+        ▼
+Authenticate to Falcon API
+        │
+        ▼
+Create RTR Session
+        │
+        ▼
+Execute PowerShell Script
+        │
+        ▼
+Collect JSON Results
+        │
+        ▼
+Generate CSV Reports
+```
+
 ```
 
 ---
